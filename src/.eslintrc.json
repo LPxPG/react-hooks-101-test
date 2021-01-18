@@ -3,17 +3,19 @@
         "browser": true,
         "es6": true,
         "node": true,
-        "jquery" : true
+        "jquery": true
     },
     "extends": "eslint:recommended",
-    "parserOptions" : {
+    "parserOptions": {
         "ecmaVersion": 8 // async があるとparse errorになるのを回避するために追記。
     },
     "rules": {
         "indent": [
             "warn",
             2,
-            { "SwitchCase": 1 }
+            {
+                "SwitchCase": 1
+            }
         ],
         "linebreak-style": [
             "warn",
@@ -32,44 +34,44 @@
             "warn",
             {
                 "vars": "all",
-                "args" : "none"
+                "args": "none"
             }
         ],
         "no-console": [
             "off"
         ],
         //追記
-        "semi-spacing" : "warn",
+        "semi-spacing": "warn",
         "no-multi-spaces": "warn",
         "no-trailing-spaces": "warn",
-        "key-spacing" : [
+        "key-spacing": [
             "warn",
             {
-                "beforeColon" : false
+                "beforeColon": false
             }
         ],
-        "comma-spacing" : [
+        "comma-spacing": [
             "warn",
             {
-                "before" : false,
-                "after" : true
+                "before": false,
+                "after": true
             }
         ],
-        "array-bracket-spacing" : "warn",
-        "spaced-comment" : "warn",
-        "object-curly-spacing" : 0,
-        "computed-property-spacing" : "warn",
+        "array-bracket-spacing": "warn",
+        "spaced-comment": "warn",
+        "object-curly-spacing": 0,
+        "computed-property-spacing": "warn",
         // "object-curly-newline": ["warn", {
         //     "ObjectExpression": "always",
         //     "ObjectPattern": { "multiline": true },
         //     "ImportDeclaration": "never",
         //     "ExportDeclaration": { "multiline": true, "minProperties": 3 }
         // }],
-        "block-spacing" : "warn",
-        "keyword-spacing" : "warn",
+        "block-spacing": "warn",
+        "keyword-spacing": "warn",
         "template-curly-spacing": "warn",
         "space-before-blocks": "warn",
-        "space-before-function-paren" : [
+        "space-before-function-paren": [
             "warn",
             "always"
         ],
@@ -77,7 +79,11 @@
             "warn"
         ],
         "no-multiple-empty-lines": [
-            "warn", { "max": 2 }
-        ]
+            "warn",
+            {
+                "max": 2
+            }
+        ],
+        "no-case-declarations": 0
     }
 }
