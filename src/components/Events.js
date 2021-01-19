@@ -2,13 +2,14 @@ import React, {useContext} from 'react'
 import Event from './Event'
 import AppContext from '../contexts/AppContext'
 
-const Events = ({state, dispatch}) => {
+const Events = () => {
+  const {state } = useContext(AppContext)
 
-  const value = useContext(AppContext) // AppContext.Consumer による記法より簡潔に書ける
+  // const value = useContext(AppContext) // AppContext.Consumer による記法より簡潔に書ける
 
   return (
     <>
-    <div>{value}</div>
+    {/* <div>{value}</div> */}
     {/* <AppContext.Consumer>
       {value => <div>{value}</div>}
     </AppContext.Consumer> */}
@@ -25,7 +26,7 @@ const Events = ({state, dispatch}) => {
           </tr>
         </thead>
         <tbody>
-          {state.map((event, index) => (<Event key={index} event={event} dispatch={dispatch} />))}
+          {state.map((event, index) => (<Event key={index} event={event} />))}
           {/* {
 
             state.map((event, index) => { // => (...) : => {return ...multi-line...} の省略記法
