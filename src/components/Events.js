@@ -26,7 +26,7 @@ const Events = () => {
           </tr>
         </thead>
         <tbody>
-          {state.map((event, index) => (<Event key={index} event={event} />))}
+          {state.events.map((event, index) => (<Event key={index} event={event} />))}
           {/* {
 
             state.map((event, index) => { // => (...) : => {return ...multi-line...} の省略記法
